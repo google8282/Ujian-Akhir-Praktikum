@@ -1,7 +1,7 @@
 //KELOMPOK 15
 //1. Indah Kusuma Ningrum (2217051139)
-//2. Ivan Aditya (22
-//3. M.Ferdiansyah (22
+//2. Ivan Aditya (2217051126)
+//3. M.Ferdiansyah (2217051147)
 
 #include<iostream>
 #include<conio.h>
