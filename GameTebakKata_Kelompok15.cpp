@@ -224,6 +224,7 @@ int main(){
 	loading();
 	header();
 	
+	kategori:
 	cout << "Silakan Pilih kategori kata yang akan ditebak \n";
 	cout << "[1] Binatang \n";
 	cout << "[2] Buah \n";
@@ -231,33 +232,40 @@ int main(){
 	cout << "[4] Kota \n";
 	cout << "[5] Benua \n\n";
 	
-	int jwb_kategori;
+	char jwb_kategori;
 	
 	cout << "Kategori : ";cin >> jwb_kategori;
 	system("cls");
 	 
 	
-	if(jwb_kategori == 1){
+	if(jwb_kategori == '1'){
 		soalkata = "komodo";
 		kategorikata = kategori[0];
 	}
-	else if(jwb_kategori == 2){
+	else if(jwb_kategori == '2'){
 		soalkata = "pepaya";
 		kategorikata = kategori[1];
 	}
-	else if(jwb_kategori == 3){
+	else if(jwb_kategori == '3'){
 		soalkata = "kanada";
 		kategorikata = kategori[2];
 	}
-	else if(jwb_kategori == 4){
+	else if(jwb_kategori == '4'){
 		
 		soalkata = "bekasi";
 		kategorikata = kategori[3];
 	}
-	else if(jwb_kategori == 5){
+	else if(jwb_kategori == '5'){
 		
 		soalkata = "afrika";
 		kategorikata = kategori[4];
+	}
+	else{
+		cout << "INPUTAN ANDA SALAH!!!"<< endl;
+		cout << "TEKAN ENTER UNTUK KEMBALI KE MENU KATEGORI" << endl;
+		_getch();
+		system("cls");
+		goto kategori;
 	}
 	string jawaban = "______";
 	int gagal = 0;
