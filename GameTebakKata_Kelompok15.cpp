@@ -135,6 +135,16 @@ void status_jawaban(vector<char> jawabanSalah, string jawaban)
 void animasi_menang(){
 	initscr();
 	
+	mvprintw(2, 39, "                                  ");
+	mvprintw(3, 39, "                                  ");
+	mvprintw(4, 39, "                                  ");
+	mvprintw(11, 40, "                                 ");
+	mvprintw(13, 42, "                                 ");
+	mvprintw(13, 48, "                                 ");
+	mvprintw(13, 52, "                                 ");
+	mvprintw(13, 56, "                                 ");
+	mvprintw(13, 59, "                                 ");
+	
 	mvprintw(11, 18, "+____ __ ____+\n");
 	mvprintw(12, 18, "|            |\n");
 	
