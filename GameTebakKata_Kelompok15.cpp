@@ -167,7 +167,7 @@ void animasi_menang(){
 		mvprintw(20, 18, "Hore! Kamu telah menyelamatkan temanmu");
 		refresh();
 		Sleep(500);	
-while(true){
+for(int i=1; i <=3; 1++){
 		mvprintw(13, 24, "\\");
 		refresh();
 		Sleep(400);
