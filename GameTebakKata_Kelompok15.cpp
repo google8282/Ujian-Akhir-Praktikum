@@ -169,7 +169,7 @@ void animasi_menang(){
 		Sleep(500);	
 		
 			
-for(int i=1; i <=3; 1++){
+for(int i=1; i <=3; i++){
 		mvprintw(13, 24, "\\");
 		refresh();
 		Sleep(400);
