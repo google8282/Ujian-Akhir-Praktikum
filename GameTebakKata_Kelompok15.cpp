@@ -352,7 +352,6 @@ int main(){
 }
 while(jawaban!=soalkata && gagal < 4);
 
-	ending(jawaban,soalkata);
-	ulang();	
+	ending(jawaban,soalkata);	
 	return 0;
 }
