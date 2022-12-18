@@ -145,6 +145,10 @@ void animasi_menang(){
 	mvprintw(13, 56, "                                 ");
 	mvprintw(13, 59, "                                 ");
 	
+	mvprintw(20, 18, "Hore! Kamu telah menyelamatkan temanmu");
+	refresh();
+	Sleep(500);
+	
 	mvprintw(11, 18, "+____ __ ____+\n");
 	mvprintw(12, 18, "|            |\n");
 	
@@ -164,9 +168,7 @@ void animasi_menang(){
 		refresh();
 		Sleep(500);	
 		
-		mvprintw(20, 18, "Hore! Kamu telah menyelamatkan temanmu");
-		refresh();
-		Sleep(500);	
+			
 for(int i=1; i <=3; 1++){
 		mvprintw(13, 24, "\\");
 		refresh();
@@ -229,10 +231,7 @@ void ending(string jawaban, string soalkata){
 	}
 }
 
-int main(){
-	system("cls");
-	loading();
-	header();
+void menukategori(){
 	
 	kategori:
 	cout << "Silakan Pilih kategori kata yang akan ditebak \n";
@@ -277,9 +276,49 @@ int main(){
 		system("cls");
 		goto kategori;
 	}
+}
+
+void ulang (){
+	
+	char main_ulang;
+	
+	cout << "Apakah anda ingin bermain lagi? (y/n)" << endl;
+	cin >> main_ulang;
+	
+	switch(main_ulang){
+	
+	case 'y':
+		menukategori();
+		break;
+	case 'Y':
+		menukategori();
+		break;
+	case 'n':
+		system("cls");
+		cout << "Terima Kasih Telah Memainkan Gane ini";
+		break;
+	case 'N':
+		system("cls");
+		cout << "Terima Kasih Telah Memainkan Gane ini";
+		break;
+	default:
+		cout << "INPUTAN ANDA SALAH!\n";
+		ulang();
+}
+	
+}
+
+
+int main(){
+	system("cls");
+	loading();
+	header();
+	
 	string jawaban = "______";
 	int gagal = 0;
 	bool tebakan = false;
+	
+	menukategori();
 	
 	do {
 		cout << "\nKATEGORI : " <<  kategorikata << endl << endl;
