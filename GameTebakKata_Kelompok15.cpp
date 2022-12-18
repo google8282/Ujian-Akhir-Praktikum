@@ -353,6 +353,6 @@ int main(){
 while(jawaban!=soalkata && gagal < 4);
 
 	ending(jawaban,soalkata);
-	
+	ulang();	
 	return 0;
 }
