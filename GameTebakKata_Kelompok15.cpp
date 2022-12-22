@@ -234,6 +234,7 @@ void ending(string jawaban, string soalkata){
 void menukategori(){
 	
 	kategori:
+	
 	cout << "Silakan Pilih kategori kata yang akan ditebak \n";
 	cout << "[1] Binatang \n";
 	cout << "[2] Buah \n";
@@ -280,6 +281,7 @@ void menukategori(){
 
 void ulang (){
 	
+	int process();
 	char main_ulang;
 	
 	cout << "Apakah anda ingin bermain lagi? (y/n)" << endl;
@@ -288,18 +290,24 @@ void ulang (){
 	switch(main_ulang){
 	
 	case 'y':
+		system("cls");
 		menukategori();
+		jawabanSalah.clear();
+		process();
 		break;
 	case 'Y':
+		system("cls");
 		menukategori();
+		jawabanSalah.clear();
+		process();
 		break;
 	case 'n':
 		system("cls");
-		cout << "Terima Kasih Telah Memainkan Gane ini";
+		cout << "Terima Kasih Telah Memainkan Game ini";
 		break;
 	case 'N':
 		system("cls");
-		cout << "Terima Kasih Telah Memainkan Gane ini";
+		cout << "Terima Kasih Telah Memainkan Game ini";
 		break;
 	default:
 		cout << "INPUTAN ANDA SALAH!\n";
@@ -308,17 +316,10 @@ void ulang (){
 	
 }
 
-
-int main(){
-	system("cls");
-	loading();
-	header();
-	
-	string jawaban = "______";
+int process(){
+string jawaban = "______";
 	int gagal = 0;
 	bool tebakan = false;
-	
-	menukategori();
 	
 	do {
 		cout << "\nKATEGORI : " <<  kategorikata << endl << endl;
@@ -354,5 +355,22 @@ while(jawaban!=soalkata && gagal < 4);
 
 	ending(jawaban,soalkata);	
 	ulang();
+	
+	return 0;
+}
+
+
+int main(){
+	system("cls");
+	loading();
+	header();
+	
+	string jawaban = "______";
+	int gagal = 0;
+	bool tebakan = false;
+	
+	menukategori();
+	
+	process();
 	return 0;
 }
