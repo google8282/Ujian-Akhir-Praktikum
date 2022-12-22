@@ -364,13 +364,7 @@ int main(){
 	system("cls");
 	loading();
 	header();
-	
-	string jawaban = "______";
-	int gagal = 0;
-	bool tebakan = false;
-	
-	menukategori();
-	
+	menukategori();	
 	process();
 	return 0;
 }
